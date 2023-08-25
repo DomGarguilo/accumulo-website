@@ -58,10 +58,6 @@ code {
     padding-left: 10px;
 }
 
-.nav-link, li.dropdown {
-  padding-top: 5px;
-}
-
 #home-description {
     font-size: 17px;
 }
@@ -147,6 +143,11 @@ footer > p {
 
 #accumulo-summit-logo img {
   height: 70px
+}
+
+#doc-sidebar {
+  position: fixed;
+  top: 0;
 }
 
 .doc-sidebar-link {
