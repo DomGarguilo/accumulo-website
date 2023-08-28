@@ -79,6 +79,7 @@ code {
 #sociallinks td {
    /* no lines in the link table */
    border-top: none;
+   border-bottom: none;
 }
 
 #bannertext {
@@ -183,7 +184,7 @@ h1[id]::before, h2[id]::before, h3[id]::before, h4[id]::before, h5[id]::before, 
   display: block;
   content: " ";
   margin-top: -80px;
-  height: 80px;
+  height: 100px;
   visibility: hidden;
 }
 

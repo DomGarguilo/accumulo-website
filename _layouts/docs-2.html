@@ -5,7 +5,7 @@ skiph1fortitle: true
 
 <div class="row">
   <div class="col-md-3">
-    <div class="accordion" id="accordionExample">
+    <div class="accordion sticky-top" id="myAccordion" style="top: 100px;">
       {% assign mydocs = site.docs-2 | group_by: 'category' %}
       {% assign categories = "getting-started,development,security,configuration,administration,troubleshooting" | split: "," %}
       {% for pcat in categories %}
@@ -17,7 +17,7 @@ skiph1fortitle: true
                   {{ pcat | capitalize | replace: "-", " " }}
                 </button>
               </div>
-              <div id="collapse{{pcat}}" class="accordion-collapse collapse{% if pcat == page.category %} show{% endif %}" aria-labelledby="heading{{ pcat }}" data-bs-parent="#accordionExample">
+              <div id="collapse{{pcat}}" class="accordion-collapse collapse{% if pcat == page.category %} show{% endif %}" aria-labelledby="heading{{ pcat }}" data-bs-parent="#myAccordion">
                 <div class="accordion-body">
                   {% assign items = dcat.items | sort: 'order' %}
                   {% for item in items %}
