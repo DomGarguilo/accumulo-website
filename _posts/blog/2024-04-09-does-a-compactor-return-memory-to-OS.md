@@ -133,7 +133,6 @@ Data is taken every 5 seconds for an hour or until stopped.
 
 ```bash
 #!/bin/bash 
-echo "usage: set PID in script to the compactor PID then run." 
 PID=$1 
 echo "Tracking PID: $PID" 
 DURATION=3600 # for 1 hour 
