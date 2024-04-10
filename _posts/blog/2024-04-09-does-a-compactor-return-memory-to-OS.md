@@ -4,7 +4,7 @@ author: Dominic Garguilo, Kevin Rathbun
 ---
 
 ## Goal
-We need to determine if, once an Accumulo process is finished using memory, will the JVM release this unused memory back to the OS? To determine this, we we specifically be testing the Compactor process, but the findings could apply to any Accumulo Server process.
+We need to determine, once an Accumulo process is finished using memory, will the JVM release this unused memory back to the OS? To determine this, we we specifically be testing the Compactor process, but the findings could apply to any Accumulo Server process.
 
 ### Test Scenario
 There could be a scenario where the amount of memory on a machine limits the number of compactors that can be run. For example, on a machine with 32G of memory, if each compactor process uses 6G of memory, we can only "fit" 5 compactors on that machine (32/6=5.333). Since each compactor process only runs on a single core, we would only be utilizing 5 cores on that machine where we would like to be using as many as we can.
